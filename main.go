@@ -53,7 +53,7 @@ func entryPoint(w http.ResponseWriter, r *http.Request) {
 			w.Write([]byte("No valid ip"))
 		}
 
-		if ip == "127.0.0.1" || ip == "::1" {
+		if ip == "127.0.0.1" || ip == "::1" || strings.HasPrefix(ip, "192") || strings.HasPrefix(ip, "172") {
 			url := "http://ifconfig.me"
 			resp, err := http.Get(url)
 			if err != nil {
