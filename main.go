@@ -27,7 +27,6 @@ type DiscomfortIndex struct {
 
 func init() {
 	// Initialize flag
-	// 引数は変数のポインタ(メモリのアドレス値)、フラグの名前、デフォルト値、使い方の説明
 	flag.StringVar(&apiPath, "apipath", "/di", "API path")
 	flag.StringVar(&port, "port", "18080", "Port")
 	flag.StringVar(&ipAddress, "ipaddress", "", "IP Address")
